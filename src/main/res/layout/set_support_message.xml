@@ -26,7 +26,7 @@
             android:scrollbars="vertical"
             android:fadeScrollbars="false"
             android:autoLink="phone|email"
-            android:hint="Enter the support message"
+            android:hint="@string/enter_support_message_hint"
             android:gravity="top|start"
             android:windowSoftInputMode="adjustPan"
             android:padding="@dimen/message_padding"

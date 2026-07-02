@@ -34,6 +34,6 @@
         android:id="@+id/activate_esim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Activate after download" />
+        android:text="@string/esim_activate_after_download" />
   </LinearLayout>
 </ScrollView>

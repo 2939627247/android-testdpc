@@ -74,7 +74,7 @@
         android:ellipsize="end"
         android:inputType="text"
         android:text="YWJj"
-        android:hint="Custom Challenge (Base64)"/>
+        android:hint="@string/custom_challenge_hint"/>
 
     <TextView
         android:layout_width="fill_parent"

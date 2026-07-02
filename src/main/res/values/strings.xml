@@ -1318,4 +1318,12 @@
     <string name="credential_manager_policy_applied_toast">Policy has been applied</string>
     <string name="credential_manager_policy_title">Enter package name of Credential Provider</string>
 
+    <!-- Strings extracted from previously hardcoded layout text, added for
+         localization support. -->
+    <string name="use_token_label">Use token:</string>
+    <string name="esim_activate_after_download">Activate after download</string>
+    <string name="basic_key_value_pair_select_type">Select type</string>
+    <string name="custom_challenge_hint">Custom Challenge (Base64)</string>
+    <string name="enter_support_message_hint">Enter the support message</string>
+
 </resources>

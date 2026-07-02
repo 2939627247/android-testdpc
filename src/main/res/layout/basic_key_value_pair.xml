@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="Select type"
+                android:text="@string/basic_key_value_pair_select_type"
             tools:ignore="HardcodedText" />
 
         <Spinner
