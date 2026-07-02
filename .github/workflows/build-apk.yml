@@ -1,0 +1,42 @@
+name: Build TestDPC APK (zh-rCN)
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - add-simplified-chinese-zh-rCN
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android platform & build-tools
+        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
+
+      - name: Set up Bazelisk
+        uses: bazelbuild/setup-bazelisk@v3
+
+      - name: Build testdpc APK
+        run: bazel build //:testdpc --announce_rc
+
+      - name: Show build output
+        run: ls -la bazel-bin/*.apk
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: testdpc-zh-rCN-apk
+          path: bazel-bin/testdpc.apk
+          if-no-files-found: error
